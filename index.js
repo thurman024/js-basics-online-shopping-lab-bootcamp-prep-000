@@ -32,6 +32,18 @@ function viewCart() {
     console.log(`In your cart, you have ${items[0]} at $${cart[0][items[0]]} and ${items[1]} at $${cart[1][items[1]]}.`)
   }
   //debugger
+  else if (cart.length > 2) {
+    var items = []; var prices = []
+    for (let i=0; i<cart.length; i++) {
+      items[i] = Object.keys(cart[i])[0]
+      prices[i] = cart[i][items[i]];
+    }
+    var cartString = "In your cart, you have "
+    for (let k=0; k<cart.length - 1; k++) {
+      cartString = cartString + items[k] + " at $" + prices[k] + ", "
+    }
+    cartString = `${cartString}and ${items[cart.length]} at $${prices[cart.length]}.`
+  }
 }
 
 function total() {
