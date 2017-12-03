@@ -42,7 +42,7 @@ function viewCart() {
     for (let k=0; k<cart.length - 1; k++) {
       cartString = cartString + items[k] + " at $" + prices[k] + ", "
     }
-    console.log(`${cartString}and ${items[cart.length]} at $${prices[cart.length]}.`)
+    console.log(`${cartString}and ${items[cart.length-1]} at $${prices[cart.length-1]}.`)
   }
 }
 
