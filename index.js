@@ -57,7 +57,18 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  let removedFlag = 0
+  for (let i=0; i<cart.length; i++) {
+    items[i] = Object.keys(cart[i])[0]
+    if (items[i] == item) {
+      cart.splice(i, 1)
+      removedFlag = 1
+    }
+  }
+  if (removedFlag == 0) {
+    console.log("That item is not in your cart")
+  }
+  return cart
 }
 
 function placeOrder(cardNumber) {
