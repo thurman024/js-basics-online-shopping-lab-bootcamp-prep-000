@@ -29,8 +29,9 @@ function viewCart() {
     for (let i=0;i<2;i++){
       items[i] = Object.keys(cart[i])[0]
     }
-    console.log(`In your cart, you have ${items[0]} at $${cart[0][items[0]]} and ${items[1]} at $${cart[0][items[1]]}.`)
+    console.log(`In your cart, you have ${items[0]} at $${cart[0][items[0]]} and ${items[1]} at $${cart[1][items[1]]}.`)
   }
+  //debugger
 }
 
 function total() {
