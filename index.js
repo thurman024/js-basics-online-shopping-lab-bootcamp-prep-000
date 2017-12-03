@@ -57,7 +57,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  let removedFlag = 0
+  let removedFlag = 0; var items = []
   for (let i=0; i<cart.length; i++) {
     items[i] = Object.keys(cart[i])[0]
     if (items[i] == item) {
@@ -66,7 +66,7 @@ function removeFromCart(item) {
     }
   }
   if (removedFlag == 0) {
-    console.log("That item is not in your cart")
+    console.log("That item is not in your cart.")
   }
   return cart
 }
